@@ -1,0 +1,32 @@
+-------------------------------------------------------------------------------
+Test set: edu.coursera.parallel.ReciprocalArraySumTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 4.004 sec <<< FAILURE! - in edu.coursera.parallel.ReciprocalArraySumTest
+testParSimpleOneMillion(edu.coursera.parallel.ReciprocalArraySumTest)  Time elapsed: 0.091 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: Mismatch in result for N = 1000000, expected = 52347.431550, computed = 51341.090982, absolute error = 1006.340567
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.assertTrue(Assert.java:20)
+	at edu.coursera.parallel.ReciprocalArraySumTest.parTestHelper(ReciprocalArraySumTest.java:83)
+	at edu.coursera.parallel.ReciprocalArraySumTest.testParSimpleOneMillion(ReciprocalArraySumTest.java:117)
+
+testParSimpleOneHundredMillion(edu.coursera.parallel.ReciprocalArraySumTest)  Time elapsed: 1.97 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: Mismatch in result for N = 100000000, expected = 5228491.981345, computed = 5247000.998703, absolute error = 18509.017358
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.assertTrue(Assert.java:20)
+	at edu.coursera.parallel.ReciprocalArraySumTest.parTestHelper(ReciprocalArraySumTest.java:83)
+	at edu.coursera.parallel.ReciprocalArraySumTest.testParSimpleOneHundredMillion(ReciprocalArraySumTest.java:127)
+
+testParManyTaskOneMillion(edu.coursera.parallel.ReciprocalArraySumTest)  Time elapsed: 0.039 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: Mismatch in result for N = 1000000, expected = 52347.431550, computed = 52093.487339, absolute error = 253.944211
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.assertTrue(Assert.java:20)
+	at edu.coursera.parallel.ReciprocalArraySumTest.parTestHelper(ReciprocalArraySumTest.java:83)
+	at edu.coursera.parallel.ReciprocalArraySumTest.testParManyTaskOneMillion(ReciprocalArraySumTest.java:140)
+
+testParManyTaskOneHundredMillion(edu.coursera.parallel.ReciprocalArraySumTest)  Time elapsed: 1.903 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: Mismatch in result for N = 100000000, expected = 5228491.981345, computed = 5229147.365863, absolute error = 655.384518
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.assertTrue(Assert.java:20)
+	at edu.coursera.parallel.ReciprocalArraySumTest.parTestHelper(ReciprocalArraySumTest.java:83)
+	at edu.coursera.parallel.ReciprocalArraySumTest.testParManyTaskOneHundredMillion(ReciprocalArraySumTest.java:151)
+
