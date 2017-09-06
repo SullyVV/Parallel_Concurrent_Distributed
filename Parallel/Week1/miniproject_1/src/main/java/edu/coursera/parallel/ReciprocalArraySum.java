@@ -90,7 +90,8 @@ public final class ReciprocalArraySum {
         private int numTasks;
 
         ReciprocalArraySumTask(int setStartIndexInclusive, int setEndIndexExclusive, double[] setInput, int setNumTasks) {
-	    this.SEQ_THRESHOLD = setInput.length/setNumTasks;
+	    //this.SEQ_THRESHOLD = setInput.length/setNumTasks;
+	    this.SEQ_THRESHOLD = (setInput.length+1)/setNumTasks;
 	    this.startIndexInclusive = setStartIndexInclusive;
 	    this.endIndexExclusive = setEndIndexExclusive;
 	    this.input = setInput;
