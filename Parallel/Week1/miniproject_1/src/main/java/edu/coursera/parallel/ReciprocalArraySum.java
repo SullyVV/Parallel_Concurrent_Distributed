@@ -138,6 +138,7 @@ public final class ReciprocalArraySum {
         assert input.length % 2 == 0;
         // Compute sum of reciprocals of array elements
         // call a class which extends recursiveAction to do the calculation in parallel
+        System.setProperty("java.util.concurrent.ForkJoinPool.common.parallelism", "8");
         ForkJoinPool forkJoinPool = new ForkJoinPool();
         //ReciprocalArraySumTask1 task = new ReciprocalArraySumTask1(0, input.length, input);
         ReciprocalArraySumTask task = new ReciprocalArraySumTask(0, input.length, input, 2);
@@ -158,6 +159,7 @@ public final class ReciprocalArraySum {
      */
     protected static double parManyTaskArraySum(final double[] input,
 						final int numTasks) {
+	    System.setProperty("java.util.concurrent.ForkJoinPool.common.parallelism", "8");
 	    ForkJoinPool forkJoinPool = new ForkJoinPool();
         ReciprocalArraySumTask task = new ReciprocalArraySumTask(0, input.length, input, numTasks);
         //ReciprocalArraySumTask task = new ReciprocalArraySumTask(0, input.length, input);
